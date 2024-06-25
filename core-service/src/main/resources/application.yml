@@ -1,0 +1,25 @@
+server:
+  port: 10701
+  servlet:
+    context-path: /core
+
+spring:
+  application:
+    name: CORE-SERVICE
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wallbrain
+    username: postgres
+    password: 123@123a
+    hikari:
+      maximum-pool-size: 50
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true

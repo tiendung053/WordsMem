@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/base-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth-service" />
+        <module name="cloud-config-server" />
+        <module name="eureka" />
+        <module name="base-service" />
+        <module name="hystrix-dashboard" />
+        <module name="user-service" />
+        <module name="core-service" />
+        <module name="cloud-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="11" />
+      <module name="Springboot-Microservice" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Springboot-Microservice" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="base-service" options="-parameters" />
+      <module name="cloud-config-server" options="-parameters" />
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="core-service" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>
