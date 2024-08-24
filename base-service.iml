@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module version="4">
-  <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/base-service">
-      <sourceFolder url="file://$MODULE_DIR$/base-service/config" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/base-service/src/main/com.src" isTestSource="false" />
-    </content>
-  </component>
-</module>

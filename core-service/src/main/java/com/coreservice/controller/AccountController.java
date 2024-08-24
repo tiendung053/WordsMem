@@ -3,6 +3,7 @@ package com.coreservice.controller;
 import com.coreservice.entity.Account;
 import com.coreservice.repository.AccountRepository;
 import com.coreservice.service.UserService;
+import exception.CustomException;
 import lombok.extern.slf4j.Slf4j;
 import model.AccountDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +25,14 @@ public class AccountController extends GenericController<Account> {
     public AccountController(AccountRepository accountRepository) {
         super(accountRepository);
     }
+
     @Autowired
     private UserService userService;
 
     @GetMapping("get-username-password")
     public ResponseEntity<AccountDTO> getAccountByUsernameAndPassword(
             @RequestParam String username,
-            @RequestParam String password) {
+            @RequestParam String password) throws CustomException {
         return new ResponseEntity<>(userService.getAccountByUsernameAndPassword(username, password), HttpStatus.OK);
     }
 }

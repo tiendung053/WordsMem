@@ -10,4 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface AccountRepository extends GenericRepository<Account> {
     @Query(value = "SELECT * FROM ADM_ACCOUNT WHERE ACCOUNT_NAME = :username AND PASSWD = :password", nativeQuery = true)
     Account findByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+
+    boolean existsAccountByUsername(String username);
+    boolean existsAccountByPassword(String password);
 }

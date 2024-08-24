@@ -1,5 +1,6 @@
 package com.dailycodebuffer.user.service;
 
+import exception.CustomException;
 import model.AccountDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -10,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface CoreClientService {
     @GetMapping("user/get-username-password")
     public AccountDTO getAccountByUsernameAndPassword(@RequestParam String username,
-                                                      @RequestParam String password);
+                                                      @RequestParam String password) throws CustomException;
 }
